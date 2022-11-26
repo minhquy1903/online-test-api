@@ -2,16 +2,16 @@ import { Column, Entity } from 'typeorm';
 import { BaseEntity } from '../../core';
 
 @Entity()
-export class User extends BaseEntity {
+export class Option extends BaseEntity {
   @Column()
-  name: string;
+  questionId: string;
 
   @Column()
-  email: string;
+  text: string;
 
   @Column()
-  password: string;
+  image: string;
 
   @Column()
-  type: number;
+  isAnswer: boolean;
 }

@@ -2,15 +2,15 @@ import { Column, Entity } from 'typeorm';
 import { BaseEntity } from '../../core';
 
 @Entity()
-export class User extends BaseEntity {
+export class Question extends BaseEntity {
   @Column()
-  name: string;
+  testId: string;
 
   @Column()
-  email: string;
+  content: string;
 
   @Column()
-  password: string;
+  images: string;
 
   @Column()
   type: number;

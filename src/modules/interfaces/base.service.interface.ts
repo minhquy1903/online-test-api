@@ -1,5 +1,4 @@
 import { EntityId } from 'typeorm/repository/EntityId';
-import { DeleteResult, UpdateResult } from 'typeorm';
 
 export interface IBaseService<T> {
   findAll(): Promise<T[]>;
@@ -10,7 +9,7 @@ export interface IBaseService<T> {
 
   create(data: any): Promise<T>;
 
-  update(id: EntityId, data: any): Promise<UpdateResult>;
+  update(id: EntityId, data: any): Promise<any>;
 
-  delete(id: EntityId): Promise<DeleteResult>;
+  delete(id: EntityId): Promise<any>;
 }

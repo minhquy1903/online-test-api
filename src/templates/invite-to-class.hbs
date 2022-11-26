@@ -1,0 +1,643 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="x-apple-disable-message-reformatting" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="supported-color-schemes" content="light dark" />
+        <title></title>
+        <style type="text/css" rel="stylesheet" media="all">
+            /* Base ------------------------------ */
+
+            @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
+            body {
+                width: 100% !important;
+                height: 100%;
+                margin: 0;
+            }
+            a {
+                color: #20b9ac;
+            }
+
+            a img {
+                border: none;
+            }
+
+            td {
+                word-break: break-word;
+            }
+
+            .preheader {
+                display: none !important;
+                visibility: hidden;
+                mso-hide: all;
+                font-size: 1px;
+                line-height: 1px;
+                max-height: 0;
+                max-width: 0;
+                opacity: 0;
+                overflow: hidden;
+            }
+            /* Type ------------------------------ */
+
+            body,
+            td,
+            th {
+                    font-family: Google Sans,Roboto,sans-serif;
+            }
+
+            h1 {
+                margin-top: 0;
+                color: #333333;
+                font-size: 22px;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            h2 {
+                margin-top: 0;
+                color: #333333;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            h3 {
+                margin-top: 0;
+                color: #333333;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            td,
+            th {
+                font-size: 16px;
+            }
+
+            p,
+            ul,
+            ol,
+            blockquote {
+                margin: 0.4em 0 1.1875em;
+                font-size: 15px;
+                line-height: 1.625;
+            }
+
+            p.sub {
+                font-size: 13px;
+            }
+            /* Utilities ------------------------------ */
+
+            .align-right {
+                text-align: right;
+            }
+
+            .align-left {
+                text-align: left;
+            }
+
+            .align-center {
+                text-align: center;
+            }
+            /* Buttons ------------------------------ */
+
+            .button {
+                background-color: #20b9ac;
+                border-top: 10px solid #20b9ac;
+                border-right: 18px solid #20b9ac;
+                border-bottom: 10px solid #20b9ac;
+                border-left: 18px solid #20b9ac;
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 3px;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+                -webkit-text-size-adjust: none;
+                box-sizing: border-box;
+            }
+
+            .button--green {
+                background-color: #22bc66;
+                border-top: 10px solid #22bc66;
+                border-right: 18px solid #22bc66;
+                border-bottom: 10px solid #22bc66;
+                border-left: 18px solid #22bc66;
+            }
+
+            .button--red {
+                background-color: #ff6136;
+                border-top: 10px solid #ff6136;
+                border-right: 18px solid #ff6136;
+                border-bottom: 10px solid #ff6136;
+                border-left: 18px solid #ff6136;
+            }
+
+            @media only screen and (max-width: 500px) {
+                .button {
+                    width: 100% !important;
+                    text-align: center !important;
+                }
+            }
+            /* Attribute list ------------------------------ */
+
+            .attributes {
+                margin: 0 0 21px;
+            }
+
+            .attributes_content {
+                background-color: rgb(249, 249, 249);
+                padding: 16px;
+            }
+
+            .attributes_item {
+                padding: 0;
+            }
+            /* Related Items ------------------------------ */
+
+            .related {
+                width: 100%;
+                margin: 0;
+                padding: 25px 0 0 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+            }
+
+            .related_item {
+                padding: 10px 0;
+                color: #cbcccf;
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            .related_item-title {
+                display: block;
+                margin: 0.5em 0 0;
+            }
+
+            .related_item-thumb {
+                display: block;
+                padding-bottom: 10px;
+            }
+
+            .related_heading {
+                border-top: 1px solid #cbcccf;
+                text-align: center;
+                padding: 25px 0 10px;
+            }
+            /* Discount Code ------------------------------ */
+
+            .discount {
+                width: 100%;
+                margin: 0;
+                padding: 24px;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+                background-color: rgb(249, 249, 249);
+                border: 2px dashed #cbcccf;
+            }
+
+            .discount_heading {
+                text-align: center;
+            }
+
+            .discount_body {
+                text-align: center;
+                font-size: 15px;
+            }
+            /* Social Icons ------------------------------ */
+
+            .social {
+                width: auto;
+            }
+
+            .social td {
+                padding: 0;
+                width: auto;
+            }
+
+            .social_icon {
+                height: 20px;
+                margin: 0 8px 10px 8px;
+                padding: 0;
+            }
+            /* Data table ------------------------------ */
+
+            .purchase {
+                width: 100%;
+                margin: 0;
+                padding: 35px 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+            }
+
+            .purchase_content {
+                width: 100%;
+                margin: 0;
+                padding: 25px 0 0 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+            }
+
+            .purchase_item {
+                padding: 10px 0;
+                color: #51545e;
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            .purchase_heading {
+                padding-bottom: 8px;
+                border-bottom: 1px solid #eaeaec;
+            }
+
+            .purchase_heading p {
+                margin: 0;
+                color: #85878e;
+                font-size: 12px;
+            }
+
+            .purchase_footer {
+                padding-top: 15px;
+                border-top: 1px solid #eaeaec;
+            }
+
+            .purchase_total {
+                margin: 0;
+                text-align: right;
+                font-weight: bold;
+                color: #333333;
+            }
+
+            .purchase_total--label {
+                padding: 0 15px 0 0;
+            }
+
+            body {
+                background-color: rgb(249, 249, 249);
+                color: #51545e;
+            }
+
+            p {
+                color: #51545e;
+            }
+
+            p.sub {
+                color: #6b6e76;
+            }
+
+            .email-wrapper {
+                width: 100%;
+                padding: 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+                background-color: rgb(249, 249, 249);
+            }
+
+            .email-content {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+            }
+            /* Masthead ----------------------- */
+
+            .email-masthead {
+                padding: 25px 0;
+                text-align: center;
+            }
+
+            .email-masthead_logo {
+                width: 94px;
+            }
+
+            .email-masthead_name {
+                font-size: 16px;
+                font-weight: bold;
+                color: #a8aaaf;
+                text-decoration: none;
+                text-shadow: 0 1px 0 white;
+            }
+            /* Body ------------------------------ */
+
+            .email-body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+                background-color: #ffffff;
+            }
+
+            .email-body_inner {
+                width: 570px;
+                margin: 0 auto;
+                padding: 0;
+                -premailer-width: 570px;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+                background-color: #ffffff;
+            }
+
+            .email-footer {
+                width: 570px;
+                margin: 0 auto;
+                padding: 0;
+                -premailer-width: 570px;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+                text-align: center;
+            }
+
+            .email-footer p {
+                color: #6b6e76;
+            }
+
+            .body-action {
+                width: 100%;
+                margin: 30px auto;
+                padding: 0;
+                -premailer-width: 100%;
+                -premailer-cellpadding: 0;
+                -premailer-cellspacing: 0;
+                text-align: center;
+            }
+
+            .body-sub {
+                margin-top: 25px;
+                padding-top: 25px;
+                border-top: 1px solid #eaeaec;
+            }
+
+            .content-cell {
+                padding: 35px;
+            }
+            .signal {
+                color: #20b9ac;
+            }
+            /*Media Queries ------------------------------ */
+
+            @media only screen and (max-width: 600px) {
+                .email-body_inner,
+                .email-footer {
+                    width: 100% !important;
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                body,
+                .email-body,
+                .email-body_inner,
+                .email-content,
+                .email-wrapper,
+                .email-masthead,
+                .email-footer {
+                    background-color: #333333 !important;
+                    color: #fff !important;
+                }
+                p,
+                ul,
+                ol,
+                blockquote,
+                h1,
+                h2,
+                h3,
+                span,
+                .purchase_item {
+                    color: #fff !important;
+                }
+                .attributes_content,
+                .discount {
+                    background-color: #222 !important;
+                }
+                .email-masthead_name {
+                    text-shadow: none !important;
+                }
+            }
+
+            :root {
+                color-scheme: light dark;
+                supported-color-schemes: light dark;
+            }
+        </style>
+        <!--[if mso]>
+            <style type="text/css">
+                .f-fallback {
+                    font-family: Arial, sans-serif;
+                }
+            </style>
+        <![endif]-->
+    </head>
+    <body>
+        <table class="email-wrapper" style="max-width:600px" cellpadding="0" cellspacing="0" role="presentation" align="center">
+            <tr>
+                <td align="center">
+                    <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                            <td class="email-masthead" style="background-color: #373d48;">
+                                <img src="http://drive.google.com/uc?export=view&id=1NhIc58E6pwc0Y1DoYlzIP7mRgfcivuXJ" />
+                            </td>
+                        </tr>
+                        <!-- Email Body -->
+                        <tr>
+                            <td class="email-body" width="100%" cellpadding="0" cellspacing="0">
+                                <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                                    <!-- Body content -->
+                                    <tr>
+                                        <td class="content-cell">
+                                            <div class="f-fallback">
+                                                <h1>Hi,</h1>
+                                                <p> <b class="signal">{{order.name}}</b> has just placed an order in your shop. </p>
+                                                <table class="discount" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                                                    <tr>
+                                                        <td>
+                                                            <h3>#{{order.id}}</h3>
+                                                        </td>
+                                                        <td>
+                                                            <h3 class="align-right">{{order.createdDate}}</h3>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <table class="purchase_content" width="100%" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <th class="purchase_heading" align="left">
+                                                                        <p class="f-fallback">Name</p>
+                                                                    </th>
+                                                                    <th class="purchase_heading" align="right">
+                                                                        <p class="f-fallback">Total</p>
+                                                                    </th>
+                                                                </tr>
+                                                               {{#each productDetails}}
+                                                                <tr>
+                                                                    <td width="70%" class="purchase_item"><span class="f-fallback">{{productName}}</span></td>
+                                                                    <td class="align-right" width="30%" class="purchase_item"><span class="f-fallback">{{price}}</span></td>
+                                                                </tr>
+                                                                {{/each}}
+                                                                <tr>
+                                                                    <td width="70%" class="purchase_footer" valign="middle">
+                                                                        <p class="f-fallback purchase_total purchase_total--label">Total</p>
+                                                                    </td>
+                                                                    <td width="30%" class="purchase_footer" valign="middle">
+                                                                        <p class="f-fallback purchase_total">{{order.total}}</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="70%" class="purchase_footer" valign="middle">
+                                                                        <p class="f-fallback purchase_total purchase_total--label">Payment method</p>
+                                                                    </td>
+                                                                    <td width="30%" class="purchase_footer" valign="middle">
+                                                                        <p class="f-fallback purchase_total">{{order.paymentMethod}} point</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="70%" class="purchase_footer" valign="middle">
+                                                                        <p class="f-fallback purchase_total purchase_total--label">Status</p>
+                                                                    </td>
+                                                                    <td width="30%" class="purchase_footer" valign="middle">
+                                                                        <p class="f-fallback purchase_total">{{order.status}}</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="discount" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                                                    <tr>
+                                                        <td>
+                                                            <h3>Receiver's information</h3>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <table class="purchase_content" width="100%" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <th class="purchase_heading" align="left">
+                                                                        <p class="f-fallback">Fullname</p>
+                                                                    </th>
+                                                                    <th class="purchase_heading" align="center">
+                                                                        <p class="f-fallback">Phone number</p>
+                                                                    </th>
+                                                                    <th class="purchase_heading" align="right">
+                                                                        <p class="f-fallback">Address</p>
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="30%" class="purchase_item" align="left"><span class="f-fallback">{{order.name}}</span></td>
+                                                                    <td width="30%" class="purchase_item" align="center"><span class="f-fallback">{{order.phoneNumber}}</span></td>
+                                                                    <td class="align-right" width="50%" class="purchase_item" align="right"><span class="f-fallback">{{order.shipAddress}}</span></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <a href="{{url}}" class="f-fallback button button--blue" target="_blank">Check it out now</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <p>If you have any questions about this receipt, simply reply to this email or reach out to our <a href="support_url">support team</a> for help.</p>                                                <p>
+                                                    Cheers, <br />
+                                                    <b class="signal">GU Store Team</b>
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                        <td width="150" style="padding: 17px 0px 17px 17px; border: 0px;">
+                                            <img
+                                                width="111px"
+                                                src="https://ci6.googleusercontent.com/proxy/ofVAfboqg0IxpVs9Sdorp-_rG2PlTWXMeShGJjMexxWljbGiJMAPHppojNWmdoFmFWBj3QAZod6IOGjKVUkxVAqnS3ggCYCUcbkBHIH5JFZpOfzcO85xwVxkkzg1WTtAMriRR1Ho86lQkh41LAlBMtpcNPdVYqp3lXaWROZLSkYSku1HyyjTD_aeaHBl2wsjGEs7yhh3Fu4=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=0B9rBcf_D8lcRY0hsdW00X0tOeWc&amp;revid=0B9rBcf_D8lcRWDBsT1hoQkxrRFlnV2hvQm80THlYd2FseFI0PQ"
+                                                style="vertical-align: middle; border-style: none;"
+                                                class="CToWUd"
+                                            />
+                                        </td>
+                                        <td width="110" style="padding: 17px 0px; border: 0px;">
+                                            <span style="line-height: 15px; font-size: 9px;">+84 28 6262 4400</span>&nbsp;&nbsp;<br />
+                                            <a
+                                                href="http://geekup.vn/"
+                                                style="color: rgb(144, 159, 158); background-color: transparent; outline: none; display: block; line-height: 15px;"
+                                                target="_blank"
+                                                data-saferedirecturl="https://www.google.com/url?q=http://geekup.vn/&amp;source=gmail&amp;ust=1627344823271000&amp;usg=AFQjCNHvl3qyV3eOYTZGjQV6a9adSn51Rg"
+                                            >
+                                                <p style="margin: 0px; font-size: 9px;">www.geekup.vn</p>
+                                            </a>
+                                        </td>
+                                        <td width="180" style="padding: 17px 0px; border: 0px;">
+                                            <a
+                                                href="https://www.google.com/maps/place/GEEK+Up+Product+Development/@10.7926785,106.6730266,17z/data=!3m1!4b1!4m5!3m4!1s0x317529247be70ed3:0xe2d8a5f3456c9583!8m2!3d10.7926785!4d106.6752206"
+                                                style="color: rgb(144, 159, 158); background-color: transparent; outline: none; display: block; line-height: 15px;"
+                                                target="_blank"
+                                                data-saferedirecturl="https://www.google.com/url?q=https://www.google.com/maps/place/GEEK%2BUp%2BProduct%2BDevelopment/@10.7926785,106.6730266,17z/data%3D!3m1!4b1!4m5!3m4!1s0x317529247be70ed3:0xe2d8a5f3456c9583!8m2!3d10.7926785!4d106.6752206&amp;source=gmail&amp;ust=1627344823271000&amp;usg=AFQjCNHRUAoudds8Qa21hta4lH2X6uGntg"
+                                            >
+                                                <p style="margin: 0px; font-size: 9px;">244/31 Huynh Van Banh, Ward 11</p>
+                                            </a>
+                                            <a
+                                                href="https://www.google.com/maps/place/GEEK+Up+Product+Development/@10.7926785,106.6730266,17z/data=!3m1!4b1!4m5!3m4!1s0x317529247be70ed3:0xe2d8a5f3456c9583!8m2!3d10.7926785!4d106.6752206"
+                                                style="color: rgb(144, 159, 158); background-color: transparent; outline: none; display: block; line-height: 15px;"
+                                                target="_blank"
+                                                data-saferedirecturl="https://www.google.com/url?q=https://www.google.com/maps/place/GEEK%2BUp%2BProduct%2BDevelopment/@10.7926785,106.6730266,17z/data%3D!3m1!4b1!4m5!3m4!1s0x317529247be70ed3:0xe2d8a5f3456c9583!8m2!3d10.7926785!4d106.6752206&amp;source=gmail&amp;ust=1627344823271000&amp;usg=AFQjCNHRUAoudds8Qa21hta4lH2X6uGntg"
+                                            >
+                                                <p style="margin: 0px; font-size: 9px;">Phu Nhuan District, HCMC, Vietnam</p>
+                                            </a>
+                                        </td>
+                                        <td style="border: 0px;">
+                                            <a
+                                                href="https://www.facebook.com/GEEKUpVN"
+                                                style="background-color: transparent; outline: none; margin-left: 10px; margin-top: 9px;"
+                                                target="_blank"
+                                                data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/GEEKUpVN&amp;source=gmail&amp;ust=1627344823271000&amp;usg=AFQjCNG7kGeqLnpgwafhNGtnrEhZk5i2Bg"
+                                            >
+                                                <img
+                                                    width="23px"
+                                                    src="https://ci6.googleusercontent.com/proxy/b2UmAAD8xXr5_7Lt_Gbvj9S4c7knvx3oCwtAgwpq1fqLxpbxqr5J9ExnL6j4JEG-5Zy8gLU0-I128qJY1bdZVOUVdYFSBUpBWRAT8nYfjhGOgQr2ZnZNoKssNpEQG102z_feYaGmjq7jV9Wt9YsMemwlvvZs4_HuewB27qUlAmanUeQqt6rR-5H5SX7u6JVdxmFupRd6vUk=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=0B9rBcf_D8lcRZUdpWGdRcl9CZXM&amp;revid=0B9rBcf_D8lcRMVIxWDNNN2pLUlhPVFc2dGlWOWV2UW5WMlpNPQ"
+                                                    style="vertical-align: middle; border-style: none;"
+                                                    class="CToWUd"
+                                                />
+                                            </a>
+                                            <a
+                                                href="https://www.linkedin.com/company/geekupvn"
+                                                style="color: rgb(17, 85, 204); background-color: transparent; outline: none; margin-left: 10px; margin-top: 9px;"
+                                                target="_blank"
+                                                data-saferedirecturl="https://www.google.com/url?q=https://www.linkedin.com/company/geekupvn&amp;source=gmail&amp;ust=1627344823272000&amp;usg=AFQjCNHrhQBPDEzWe0wek1l7iY__j9QRLg"
+                                            >
+                                                <img
+                                                    width="23px"
+                                                    src="https://ci4.googleusercontent.com/proxy/TO9g6vAHg5jksdJKhxFK4urqYGay07BioaoC23pk8wrkcy6mUfvom0JFMvZ8gvkZdrWjwpoIYCwB-kSpbRViGT934XRGIeKCJ34KKFjzO4MBVPAQaZp9zrKVgYcZv8fBRJgzpAGCFG3GNLmI639tMIpP9JtsuDmbWwcrVPxZiZfVduf2tt29RPScM78st3vmQVjcTm1Vo1M=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=0B9rBcf_D8lcRR0hwZmEtTWJCOE0&amp;revid=0B9rBcf_D8lcRL2RsdW8xUlAxQTJKZCtYN2pxdXdob1EvRGhzPQ"
+                                                    style="vertical-align: middle; border-style: none;"
+                                                    class="CToWUd"
+                                                />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

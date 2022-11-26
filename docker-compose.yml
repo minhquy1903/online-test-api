@@ -19,7 +19,7 @@ services:
   #     - online-test
 
   postgres:
-    image: postgres:13.8
+    image: postgres:13.6
     restart: always
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
