@@ -14,7 +14,7 @@ export class AuthService {
   ) {}
 
   async login(data: LoginRequest): Promise<any> {
-    const user = await this.userService.findUserByEmail(data.email);
+    const user = await this.userService.findOneBy({ email: data.email });
 
     if (!user)
       return new BadRequestException('Email or password is incorrect!');
@@ -37,8 +37,7 @@ export class AuthService {
   }
 
   async register(user: any): Promise<any> {
-    const userExisted = await this.userService.findUserByEmail(user.email);
-    console.log(userExisted);
+    const userExisted = await this.userService.findOneBy({ email: user.email });
 
     if (userExisted) {
       return new BadRequestException(`User ${user.email} is existed`);
@@ -46,7 +45,7 @@ export class AuthService {
 
     const passwordEncoded = await encodePassword(user.password);
 
-    await this.userService.save({
+    await this.userService.create({
       ...user,
       password: passwordEncoded,
     });

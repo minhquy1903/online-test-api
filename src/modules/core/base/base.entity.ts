@@ -10,7 +10,4 @@ export class BaseEntity {
 
   @CreateDateColumn({ type: 'timestamp', name: 'created_at' })
   createdAt: string;
-
-  // @UpdateDateColumn({ type: 'timestamp', name: 'updated_at' })
-  // updatedAt?: string;
 }
