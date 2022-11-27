@@ -1,17 +1,10 @@
-import { Controller, Post, UseGuards } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
+import { BaseController } from '../core/base/base.controller';
+import { UserService } from './user.service';
 
-@Controller('user')
-export class UserController {
-  //   constructor() {}
-
-  @UseGuards()
-  @Post('login')
-  async login() {
-    // return await this.authService.login({ name: 'Minh Quy', id: 111 });
-  }
-
-  @Post('register')
-  async register() {
-    return;
+@Controller('users')
+export class UserController extends BaseController<any> {
+  constructor(userService: UserService) {
+    super(userService);
   }
 }

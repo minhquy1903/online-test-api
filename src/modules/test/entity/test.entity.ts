@@ -14,4 +14,7 @@ export class Test extends BaseEntity {
 
   @Column()
   type: number;
+
+  @Column()
+  status: number;
 }

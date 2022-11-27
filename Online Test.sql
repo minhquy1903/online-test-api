@@ -1,6 +1,6 @@
 CREATE TABLE "user" (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
-  "gmail" varchar,
+  "email" varchar,
   "phone_number" varchar,
   "name" varchar,
   "password" varchar,
@@ -45,13 +45,13 @@ CREATE TABLE "class" (
 );
 
 CREATE TABLE "class_user" (
-  "id" uuid,
+  "id" uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   "user_id" uuid,
   "class_id" uuid
 );
 
 CREATE TABLE "user_test" (
-  "id" uuid,
+  "id" uuid DEFAULT gen_random_uuid(),
   "user_id" uuid,
   "test_id" uuid,
   "start" timestamptz,
@@ -60,7 +60,7 @@ CREATE TABLE "user_test" (
   "deadline" timestamptz,
   "status" integer,
   "created_at" timestamptz DEFAULT (now()),
-  PRIMARY KEY ("user_id", "test_id")
+  PRIMARY KEY ("user_id", "test_id", "id")
 );
 
 CREATE TABLE "user_answer" (

@@ -4,7 +4,7 @@ import { comparePassword } from 'src/utils/compare-password';
 import { encodePassword } from 'src/utils/encode-password';
 import { BadRequestException } from 'src/utils/exception';
 import { UserService } from '../user/user.service';
-import { LoginRequest } from './dto/LoginRequest.dto';
+import { LoginRequest } from './dto/login-request.dto';
 
 @Injectable()
 export class AuthService {

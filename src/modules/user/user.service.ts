@@ -12,12 +12,4 @@ export class UserService extends BaseService<User> {
   ) {
     super(usersRepo);
   }
-
-  async findOne(condition: any): Promise<any> {
-    try {
-      return await this.usersRepo.findOneBy(condition);
-    } catch (error) {
-      throw new Error(error);
-    }
-  }
 }

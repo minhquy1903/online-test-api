@@ -1,4 +1,4 @@
-import { Entity, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { EntityId } from 'typeorm/repository/EntityId';
 import { IBaseService } from '../../interfaces';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -36,6 +36,8 @@ export class BaseService<T> implements IBaseService<T> {
   }
 
   async update(id: EntityId, data: any): Promise<any> {
+    console.log(id);
+    console.log(data);
     return await this.repository.update(id, data);
   }
 
