@@ -1,15 +1,23 @@
+import { Question } from './entity';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { BaseService } from '../core/base/base.service';
-import { Test } from '../test/entity';
 
 @Injectable()
-export class QuestionService extends BaseService<Test> {
+export class QuestionService extends BaseService<Question> {
   constructor(
-    @InjectRepository(Test)
-    private questionService: Repository<Test>,
+    @InjectRepository(Question)
+    private questionRepository: Repository<Question>,
   ) {
-    super(questionService);
+    super(questionRepository);
+  }
+
+  async findQuestionByName(search) {
+    return await this.questionRepository.find({
+      where: {
+        content: search,
+      }
+    })
   }
 }

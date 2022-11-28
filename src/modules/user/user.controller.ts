@@ -1,10 +1,13 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { BaseController } from '../core/base/base.controller';
+import { User } from './entity';
 import { UserService } from './user.service';
 
 @Controller('users')
-export class UserController extends BaseController<any> {
-  constructor(userService: UserService) {
-    super(userService);
+export class UserController extends BaseController<User> {
+  constructor(private userService: UserService) {
+    super(userService)
   }
 }
+
+

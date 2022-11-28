@@ -7,7 +7,7 @@ export class BaseController<T> {
   constructor(private baseService: BaseService<T>) {}
 
   @Get()
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   findAll(): Promise<T[]> {
     return this.baseService.findAll();
   }
@@ -31,7 +31,7 @@ export class BaseController<T> {
   }
 
   @Post()
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   async create(@Body() body: T): Promise<T> {
     return this.baseService.create(body);
   }

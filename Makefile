@@ -4,13 +4,13 @@ bootstrap:
 	echo "Setup environment sucessfully. Happy coding!!!"
 
 up:
-	docker compose up -d --remove-orphans
+	docker-compose up -d --remove-orphans
 
 down:
-	docker compose down
+	docker-compose down
 
 ps:
-	docker compose ps
+	docker-compose ps
 
 db-migrate:
 	yarn run migration:run

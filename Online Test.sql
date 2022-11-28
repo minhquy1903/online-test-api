@@ -116,3 +116,5 @@ ALTER TABLE
   "class_user"
 ADD
   FOREIGN KEY ("user_id") REFERENCES "user" ("id");
+
+alter table test create column 

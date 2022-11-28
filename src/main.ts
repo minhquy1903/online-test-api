@@ -13,6 +13,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   app.use(json({ limit: '100mb' }));
+  app.useGlobalPipes(new ValidationPipe());
 
   app.use(
     urlencoded({ limit: '100mb', extended: true, parameterLimit: 50000 }),

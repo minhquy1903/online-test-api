@@ -7,6 +7,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
 import { SharedModule } from './shared/shared.module';
 import { TestModule } from './modules/test/test.module';
+import { QuestionModule } from './modules/question/question.module';
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { TestModule } from './modules/test/test.module';
     AuthModule,
     UserModule,
     TestModule,
+    QuestionModule
   ],
 })
 export class AppModule {}
