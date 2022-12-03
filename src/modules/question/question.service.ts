@@ -13,11 +13,16 @@ export class QuestionService extends BaseService<Question> {
     super(questionRepository);
   }
 
+  async create(data: any): Promise<Question> {
+    console.log(data);
+    return;
+  }
+
   async findQuestionByName(search) {
     return await this.questionRepository.find({
       where: {
         content: search,
-      }
-    })
+      },
+    });
   }
 }

@@ -3,7 +3,7 @@ import { Controller, Get, Post, Query, Body } from '@nestjs/common';
 import { BaseController } from '../core/base/base.controller';
 import { QuestionService } from './question.service';
 
-@Controller('questions')
+@Controller('question')
 export class QuestionController extends BaseController<any> {
   constructor(private questionService: QuestionService) {
     super(questionService);
@@ -11,18 +11,19 @@ export class QuestionController extends BaseController<any> {
 
   @Get('/alo')
   async findQuestionByName(@Query('search') search: string): Promise<{
-    message: string,
-    data: Question[],
+    message: string;
+    data: Question[];
   }> {
-    const result = await this.questionService.findQuestionByName(search)
+    const result = await this.questionService.findQuestionByName(search);
     return {
       message: 'success',
-      data: result
-    }
+      data: result,
+    };
   }
 
-  @Post()
-  async create(@Body() body: Question): Promise<Question> {
+  @Post('create')
+  async create(@Body() body: any): Promise<Question> {
+    console.log(body);
     return this.questionService.create(body);
   }
 }
