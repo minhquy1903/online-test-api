@@ -1,13 +1,12 @@
 import { Question } from './entity';
-import { Controller, Get, Post, Query, Body } from '@nestjs/common';
-import { BaseController } from '../core/base/base.controller';
+import { Body, Controller, Get, Post, Query, UseGuards } from '@nestjs/common';
 import { QuestionService } from './question.service';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { CurrentUser } from '../../decorator';
 
 @Controller('question')
-export class QuestionController extends BaseController<any> {
-  constructor(private questionService: QuestionService) {
-    super(questionService);
-  }
+export class QuestionController {
+  constructor(private questionService: QuestionService) {}
 
   @Get('/alo')
   async findQuestionByName(@Query('search') search: string): Promise<{
@@ -21,9 +20,16 @@ export class QuestionController extends BaseController<any> {
     };
   }
 
-  @Post('create')
-  async create(@Body() body: any): Promise<Question> {
-    console.log(body);
-    return this.questionService.create(body);
+  @Post('/create')
+  @UseGuards(JwtAuthGuard)
+  async create(@Body() body: any, @CurrentUser() user): Promise<any> {
+    console.log('body', body);
+    return await this.questionService.create({ ...body, userId: user.id });
+  }
+
+  @Get()
+  @UseGuards(JwtAuthGuard)
+  async findAll(condition: any, @CurrentUser() user): Promise<any[]> {
+    return await this.questionService.findAll(condition, user);
   }
 }
